@@ -1,0 +1,35 @@
+You may wonder:
+
+"Okay, I created a Servlet. Who runs it?"
+
+Tomcat.
+
+Tomcat is a Servlet container / web server that manages Servlets.
+
+Think of Tomcat as a manager.
+
+                 TOMCAT
+                    |
+        -------------------------
+        |           |           |
+   StudentServlet LoginServlet OrderServlet
+
+Tomcat:
+
+starts your web application
+receives HTTP requests
+finds the correct Servlet
+creates/manages Servlet objects
+calls doGet() / doPost()
+sends the response back
+Very simple analogy
+
+Imagine:
+
+Customer → Restaurant → Waiter → Kitchen
+
+In web applications:
+
+Browser → Tomcat → Servlet → Java logic
+
+Tomcat is basically the environment that runs your Servlet.
