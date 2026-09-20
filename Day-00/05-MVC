@@ -1,0 +1,55 @@
+MVC =
+
+M → Model
+
+V → View
+
+C → Controller
+----------------------------------------
+Think:
+
+Browser
+   ↓
+Controller
+   ↓
+Model
+   ↓
+View
+   ↓
+Browser
+
+-------------------------------------------------
+Model
+
+Represents the data.
+
+Example:
+
+public class Student {
+
+    private String name;
+    private int age;
+
+}
+------------------------------------------------
+
+View
+
+What the user sees.
+
+Examples:
+
+JSP
+Thymeleaf
+HTML
+
+---------------------------------------------
+Controller
+
+Receives the request and decides what should happen.
+
+Example:
+
+@Controller
+public class StudentController {
+}
