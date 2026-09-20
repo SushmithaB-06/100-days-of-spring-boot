@@ -1,0 +1,50 @@
+Accepting data — the Servlet way
+
+------------------------------------------------
+Suppose we have an HTML form:
+
+<form action="/student" method="post">
+
+    <input name="name">
+
+    <input name="age">
+
+    <button type="submit">
+        Submit
+    </button>
+
+</form>
+----------------------------------------------------
+User enters:
+
+Name = Sushmitha
+Age = 21
+--------------------------------------------------------
+The browser sends:
+
+POST /student
+
+name=Sushmitha&age=21
+
+------------------------------------------------------------
+In a traditional Servlet:
+
+protected void doPost(HttpServletRequest request,
+                      HttpServletResponse response) {
+
+    String name = request.getParameter("name");
+
+    String age = request.getParameter("age");
+}
+-----------------------------------------------------------------
+The important method is:
+
+request.getParameter()
+
+So:
+
+request.getParameter("name")
+
+means:
+
+"Give me the value of the form field called name."
