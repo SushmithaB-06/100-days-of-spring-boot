@@ -1,0 +1,44 @@
+Now Tomcat receives:
+
+GET /student
+
+But Tomcat has many Servlets.
+
+How does it know which Servlet should handle /student?
+
+That's Servlet Mapping.
+
+@WebServlet("/student")
+public class StudentServlet extends HttpServlet {
+}
+
+This means:
+
+/student
+     ↓
+StudentServlet
+
+So:
+
+http://localhost:8080/student
+
+will go to:
+
+StudentServlet
+
+
+Older XML way
+
+You could also configure it in web.xml:
+
+<servlet>
+    <servlet-name>student</servlet-name>
+    <servlet-class>StudentServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>student</servlet-name>
+    <url-pattern>/student</url-pattern>
+</servlet-mapping>
+
+Modern Java applications generally use annotations instead.
