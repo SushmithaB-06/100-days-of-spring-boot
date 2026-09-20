@@ -1,0 +1,33 @@
+With traditional Servlet:
+
+Browser
+   ↓
+Tomcat
+   ↓
+Servlet
+   ↓
+JSP
+----------------------------------------------------------
+With Spring MVC:
+
+Browser
+   ↓
+Tomcat
+   ↓
+DispatcherServlet
+   ↓
+Controller
+   ↓
+Service
+   ↓
+Repository
+   ↓
+Database
+-----------------------------------------------------------
+Spring MVC introduces a central Servlet called:
+
+DispatcherServlet
+
+You don't normally write this Servlet yourself.
+
+Spring Boot configures it for you.
