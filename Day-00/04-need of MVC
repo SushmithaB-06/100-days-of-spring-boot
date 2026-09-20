@@ -1,0 +1,27 @@
+Imagine your Servlet becomes huge:
+
+public class StudentServlet extends HttpServlet {
+
+    protected void doGet(...) {
+
+        // receive data
+
+        // validate data
+
+        // database code
+
+        // business logic
+
+        // HTML code
+
+        // response
+    }
+}
+
+
+
+Everything is inside one class.
+
+So we separate responsibilities.
+
+That's where MVC comes in.
