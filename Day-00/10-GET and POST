@@ -1,0 +1,36 @@
+Usually we distinguish between:
+
+GET
+
+Used to retrieve data.
+
+@GetMapping("/students")
+public String students() {
+    return "students";
+}
+
+
+
+POST
+
+Used to submit data.
+
+@PostMapping("/students")
+public String saveStudent() {
+    return "success";
+}
+
+
+
+
+Instead of:
+@RequestMapping(value="/students", method=RequestMethod.GET)
+
+we normally use:
+
+@GetMapping("/students")
+and
+@PostMapping("/students")
+
+
+because they're cleaner.
