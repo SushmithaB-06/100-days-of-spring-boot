@@ -1,0 +1,26 @@
+Spring makes this easier.
+
+Instead of:
+String name = request.getParameter("name");
+-----------------------------------------------------------
+we can write:
+
+@PostMapping("/student")
+public String saveStudent(
+        @RequestParam String name,
+        @RequestParam int age) {
+
+    System.out.println(name);
+    System.out.println(age);
+
+    return "success";
+}
+---------------------------------------------------------------
+Request:
+
+/student?name=Sushmitha&age=21
+
+Spring automatically gives:
+
+name = "Sushmitha"
+age = 21
