@@ -1,0 +1,53 @@
+Instead of manually creating:
+
+HttpServlet
+
+Spring gives us:
+
+@Controller
+
+
+
+
+
+
+Example:
+
+@Controller
+public class StudentController {
+
+    @RequestMapping("/student")
+    public String student() {
+
+        return "student";
+    }
+}
+
+
+
+
+What happens?
+
+Browser:
+
+/student
+
+↓
+
+Spring finds:
+
+student()
+
+↓
+
+returns:
+
+"student"
+
+↓
+
+Spring looks for the corresponding view.
+
+With JSP, for example:
+
+student.jsp
