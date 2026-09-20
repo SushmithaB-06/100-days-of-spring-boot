@@ -1,0 +1,28 @@
+JSP = JavaServer Pages
+
+It was commonly used to generate HTML dynamically.
+
+Example:
+
+<html>
+
+<body>
+
+<h1>Hello ${name}</h1>
+
+</body>
+
+</html>
+
+
+
+If the model contains:
+
+name = Sushmitha
+
+The browser receives:
+
+<h1>Hello Sushmitha</h1>
+
+
+So JSP is basically a server-side view technology
