@@ -1,0 +1,42 @@
+Now imagine we want to send data from Controller → View.
+-----------------------------------------------------------------
+Example:
+
+Controller has:
+
+name = Sushmitha
+age = 21
+
+We want the HTML page to display:
+
+Welcome Sushmitha
+Your age is 21
+---------------------------------------------------------------------
+We need something to carry the data.
+
+That's the Model.
+
+model.addAttribute("name", name);
+model.addAttribute("age", age);
+--------------------------------------------------------------------------
+Example:
+
+@GetMapping("/student")
+public String student(Model model) {
+
+    model.addAttribute("name", "Sushmitha");
+    model.addAttribute("age", 21);
+
+    return "student";
+}
+--------------------------------------------------------------------------
+Now:
+
+Controller
+     |
+     | name = Sushmitha
+     | age = 21
+     ↓
+   Model
+     ↓
+   View
