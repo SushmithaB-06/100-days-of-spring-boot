@@ -1,0 +1,23 @@
+@RequestMapping connects a URL to a controller method.
+
+@RequestMapping("/hello")
+public String hello() {
+    return "hello";
+}
+
+
+Means:
+
+/hello
+   ↓
+hello()
+
+
+
+So when browser requests:
+
+http://localhost:8080/hello
+
+Spring executes:
+
+hello()
